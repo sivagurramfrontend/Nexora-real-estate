@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nexora Real Estate | Modern HTML Template</title>
+  <meta name="description" content="Modern responsive real estate website with property search, filtering, agents, blog and favorites.">
+  <meta name="theme-color" content="#15212b">
+  <meta property="og:site_name" content="Nexora Real Estate">
+  <meta property="og:title" content="Nexora Real Estate | Modern HTML Template">
+  <meta property="og:description" content="Modern responsive real estate website with property search, filtering, agents, blog and favorites.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ===== Top bar ===== -->
+  <div class="topbar">
+    <div class="container">
+      <span>Premium homes. Trusted service.</span>
+      <span>Mon–Sat: 9:00 AM – 7:00 PM</span>
+    </div>
+  </div>
+
+  <!-- ===== Header / navigation ===== -->
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a class="logo" href="index.html"><span class="logo-mark" aria-hidden="true"><svg class="icon " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg></span>Nexora</a>
+      <button class="menu-btn" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="primaryNav"><svg class="icon " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></button>
+      <nav class="nav-links" id="primaryNav" aria-label="Primary navigation">
+          <a href="index.html" class="active" aria-current="page">Home</a>
+          <a href="properties.html">Properties</a>
+          <a href="agents.html">Agents</a>
+          <a href="about.html">About</a>
+          <a href="blog.html">Blog</a>
+          <a href="contact.html">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <a class="fav-link" href="favorites.html" aria-label="Favorites"><svg class="icon " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg><span class="count" data-fav-count>0</span></a>
+        <a class="phone" href="tel:+1234567890"><svg class="icon " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg> +1 234 567 890</a>
+        <a class="btn btn-primary" href="contact.html">Schedule a visit</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <section class="hero">
+      <div class="container hero-content">
+        <div class="eyebrow">Find your perfect home</div>
+        <h1>A better way to find your <span>dream property</span></h1>
+        <p>Discover premium homes, modern apartments and investment opportunities with a clean, flexible real estate template.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="properties.html">Explore properties <svg class="icon " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
+          <a class="btn btn-light" href="agents.html">Talk to an agent</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="container search-wrap">
+        <form class="search-box" id="homeSearch" aria-label="Property search">
+          <div class="tabs" role="group" aria-label="Listing type">
+            <button type="button" class="tab" data-search-status="Sale" aria-pressed="true">Buy</button>
+            <button type="button" class="tab" data-search-status="Rent" aria-pressed="false">Rent</button>
+          </div>
+          <div class="search-grid">
+            <label class="field"><span class="field-label">Location</span><input id="homeLocation" placeholder="City or state" autocomplete="off"></label>
+            <label class="field"><span class="field-label">Property type</span>
+              <select id="homeType"><option value="">Any type</option><option>Apartment</option><option>Villa</option><option>House</option><option>Commercial</option><option>Land</option></select></label>
+            <label class="field"><span class="field-label">Price</span>
+              <select id="homePrice"><option value="">Any price</option><option value="0-300000">Under $300k</option><option value="300000-700000">$300k – $700k</option><option value="700000-999999999">$700k+</option></select></label>
+            <label class="field"><span class="field-label">Bedrooms</span>
+              <select id="homeBeds"><option value="">Any</option><option value="1">1+</option><option value="2">2+</option><option value="3">3+</option><option value="4">4+</option></select></label>
+            <button class="btn btn-primary" type="submit"><svg class="icon " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg> Search</button>
+          </div>
+        </form>
+    </div>
+
+    <section class="container" aria-label="Browse by property type">
+      <div class="categories">
+        <a class="category" href="properties.html?type=Apartment"><div class="cat-icon"><svg class="icon " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg></div><strong>Apartments</strong><span>Modern living spaces</span></a>
+        <a class="category" href="properties.html?type=Villa"><div class="cat-icon"><svg class="icon " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg></div><strong>Villas</strong><span>Luxury lifestyle</span></a>
+        <a class="category" href="properties.html?type=House"><div class="cat-icon"><svg class="icon " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg></div><strong>Houses</strong><span>Family friendly</span></a>
+        <a class="category" href="properties.html?type=Commercial"><div class="cat-icon"><svg class="icon " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg></div><strong>Commercial</strong><span>Business spaces</span></a>
+        <a class="category" href="properties.html?type=Land"><div class="cat-icon"><svg class="icon " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"></polygon><line x1="8" y1="2" x2="8" y2="18"></line><line x1="16" y1="6" x2="16" y2="22"></line></svg></div><strong>Land</strong><span>Investment plots</span></a>
+      </div>
+    </section>
+
+    <section class="section soft" id="featured">
+      <div class="container">
+        <div class="section-head">
+          <div><h2>Featured properties</h2><p>Handpicked listings, ready to customize</p></div>
+          <a class="text-link" href="properties.html">View all properties <svg class="icon " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
+        </div>
+        <div class="property-grid" id="featuredGrid"><noscript><div class="empty-state">Please enable JavaScript to view this content.</div></noscript></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container split">
+        <div class="split-img" role="img" aria-label="Illustration of a modern living room"></div>
+        <div>
+          <div class="eyebrow">Why choose us</div>
+          <h2 class="font-head section-title">Why choose Nexora?</h2>
+          <p class="muted">A flexible front-end foundation for agencies, brokers and property professionals.</p>
+          <div class="features">
+            <div class="feature"><div class="feature-icon"><svg class="icon " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></div><div><h3>Trusted listings</h3><p>Clear property data structure</p></div></div>
+            <div class="feature"><div class="feature-icon"><svg class="icon " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg></div><div><h3>Expert agents</h3><p>Data-driven agent profiles</p></div></div>
+            <div class="feature"><div class="feature-icon"><svg class="icon " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M21 2l-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3m-3.5 3.5L19 4"></path></svg></div><div><h3>Easy process</h3><p>Simple static HTML setup</p></div></div>
+            <div class="feature"><div class="feature-icon"><svg class="icon " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline></svg></div><div><h3>Easy customization</h3><p>Vanilla JS with no build step</p></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section soft">
+      <div class="container">
+        <div class="section-head">
+          <div><h2>Meet our agents</h2><p>Reusable agent cards with individual profile pages</p></div>
+          <a class="text-link" href="agents.html">View all agents <svg class="icon " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
+        </div>
+        <div class="agents" id="homeAgents"><noscript><div class="empty-state">Please enable JavaScript to view this content.</div></noscript></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head"><div><h2>What our clients say</h2><p>Sample testimonials. Replace them with your own customer content.</p></div></div>
+        <div class="testimonials">
+          <figure class="quote">
+            <div class="stars" role="img" aria-label="5 out of 5 stars"><svg class="icon " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg class="icon " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg class="icon " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg class="icon " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg class="icon " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></div>
+            <blockquote><p>The clean property presentation made it easy for our team to adapt the template.</p></blockquote>
+            <figcaption class="person"><img src="assets/images/avatar-priya.svg" alt="" width="42" height="42" loading="lazy"><div><b>Priya Sharma</b><small>Sample homeowner</small></div></figcaption>
+          </figure>
+          <figure class="quote">
+            <div class="stars" role="img" aria-label="5 out of 5 stars"><svg class="icon " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg class="icon " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg class="icon " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg class="icon " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg class="icon " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></div>
+            <blockquote><p>The filtering and property detail flow give this site a much more complete product feel.</p></blockquote>
+            <figcaption class="person"><img src="assets/images/avatar-daniel.svg" alt="" width="42" height="42" loading="lazy"><div><b>Daniel Lee</b><small>Sample investor</small></div></figcaption>
+          </figure>
+          <figure class="quote">
+            <div class="stars" role="img" aria-label="5 out of 5 stars"><svg class="icon " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg class="icon " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg class="icon " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg class="icon " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg class="icon " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></div>
+            <blockquote><p>A strong starting point for an agency website that still stays simple to customize.</p></blockquote>
+            <figcaption class="person"><img src="assets/images/avatar-amanda.svg" alt="" width="42" height="42" loading="lazy"><div><b>Amanda White</b><small>Sample homeowner</small></div></figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="container cta-inner">
+        <div><h2>Ready to customize Nexora?</h2><p>Use the included documentation to adapt the template to your brand.</p></div>
+        <a class="btn btn-primary" href="contact.html">Contact us <svg class="icon " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a class="logo" href="index.html"><span class="logo-mark" aria-hidden="true"><svg class="icon " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg></span>Nexora</a>
+          <p class="mt-2">A polished real estate website template for modern property businesses.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Facebook"><svg class="icon " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a>
+            <a href="#" aria-label="Instagram"><svg class="icon " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
+            <a href="#" aria-label="Twitter"><svg class="icon " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg></a>
+            <a href="#" aria-label="LinkedIn"><svg class="icon " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
+          </div>
+        </div>
+        <div>
+          <h2>Quick links</h2>
+          <a href="index.html">Home</a>
+          <a href="properties.html">Properties</a>
+          <a href="agents.html">Agents</a>
+          <a href="about.html">About</a>
+          <a href="blog.html">Blog</a>
+          <a href="faq.html">FAQ</a>
+        </div>
+        <div>
+          <h2>Property types</h2>
+          <a href="properties.html?type=Apartment">Apartments</a>
+          <a href="properties.html?type=Villa">Villas</a>
+          <a href="properties.html?type=House">Houses</a>
+          <a href="properties.html?type=Commercial">Commercial</a>
+          <a href="properties.html?type=Land">Land</a>
+        </div>
+        <div>
+          <h2>Contact</h2>
+          <a href="tel:+1234567890"><svg class="icon " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg> +1 234 567 890</a>
+          <a href="mailto:info@example.com"><svg class="icon " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg> info@example.com</a>
+          <a href="contact.html"><svg class="icon " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg> 123 Main Street, New York, NY</a>
+          <a href="submit-property.html"><svg class="icon " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" y1="3" x2="12" y2="15"></line></svg> List your property</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; <span data-year>2026</span> Nexora. All rights reserved.</span>
+        <nav aria-label="Legal"><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></nav>
+      </div>
+    </div>
+  </footer>
+
+  <button class="to-top" type="button" aria-label="Back to top"><svg class="icon " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><polyline points="18 15 12 9 6 15"></polyline></svg></button>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <!-- ===== Scripts ===== -->
+  <script src="assets/js/icons.js"></script>
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/pages/home.js"></script>
+</body>
+</html>

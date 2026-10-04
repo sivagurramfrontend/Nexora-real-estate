@@ -1,0 +1,31 @@
+NEXORA REAL ESTATE HTML TEMPLATE — CREDITS AND LICENSES
+=========================================================
+Every third-party asset bundled with this template is listed here. Full licence
+texts are in the /licenses folder.
+
+FONTS (self-hosted, assets/fonts/)
+  DM Sans ................ SIL Open Font License 1.1   https://github.com/googlefonts/dm-fonts
+  Playfair Display ....... SIL Open Font License 1.1   https://github.com/clauseggers/Playfair
+  (WOFF2 files supplied through the Fontsource project, https://fontsource.org)
+
+ICONS (assets/js/icons.js, assets/favicon.svg)
+  Feather Icons .......... MIT License, (c) Cole Bemis   https://feathericons.com
+  The "bed" and "bath" icons are original artwork.
+
+JAVASCRIPT LIBRARY (assets/vendor/leaflet/)
+  Leaflet 1.9.x .......... BSD 2-Clause License, (c) Vladimir Agafonkin   https://leafletjs.com
+
+MAP DATA (loaded at runtime, not bundled)
+  OpenStreetMap tiles .... (c) OpenStreetMap contributors, ODbL   https://www.openstreetmap.org/copyright
+  Attribution is displayed on every map. Please keep it visible.
+
+IMAGES (assets/images/)
+  All property, interior, hero, blog and avatar images are ORIGINAL vector
+  illustrations created for this template. They contain no photographs, no
+  stock content and no third-party artwork. The people shown in the avatars are
+  fictional.
+  Replace them with your own licensed photography before launching a real site.
+
+NO OTHER THIRD-PARTY CODE, FONTS, IMAGES OR PLUGINS ARE INCLUDED.
+(No jQuery, no Bootstrap, no CDN requests: the template works fully offline,
+except for the map tiles.)

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nexora Documentation</title>
+  <meta name="description" content="Documentation for the Nexora Real Estate HTML template.">
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="doc.css">
+</head>
+<body>
+  <div class="doc-wrap">
+    <nav class="doc-side" aria-label="Documentation">
+      <p class="brand">Nexora</p>
+      <small>Documentation &middot; v1.1.0</small>
+      <ol>
+      <li><a href="#intro">Introduction</a></li>
+      <li><a href="#start">Quick start</a></li>
+      <li><a href="#files">File structure</a></li>
+      <li><a href="#pages">Pages</a></li>
+      <li><a href="#content">Editing content</a></li>
+      <li><a href="#images">Images</a></li>
+      <li><a href="#brand">Colors, fonts and logo</a></li>
+      <li><a href="#forms">Forms</a></li>
+      <li><a href="#maps">Maps</a></li>
+      <li><a href="#favorites">Favorites</a></li>
+      <li><a href="#a11y">Accessibility and SEO</a></li>
+      <li><a href="#browsers">Browser support</a></li>
+      <li><a href="#credits">Credits and licenses</a></li>
+      <li><a href="#changelog">Changelog</a></li>
+      <li><a href="#support">Support</a></li>
+      </ol>
+    </nav>
+    <main class="doc-main" id="main">
+
+<h1>Nexora Real Estate</h1>
+<p class="meta">HTML template &middot; Version 1.1.0 &middot; Updated October 2026</p>
+
+<h2 id="intro">Introduction</h2>
+<p>Nexora is a responsive real estate website template built with semantic HTML5, CSS3 and vanilla JavaScript. It needs no build step, no jQuery and no framework. Open <code>index.html</code> in a browser, or upload the folder to any static host.</p>
+<h3>Features</h3>
+<ul>
+  <li>Two homepage layouts (<code>index.html</code>, <code>index-2.html</code>) and 16 pages in total</li>
+  <li>Property search on the home page and filters, sorting, pagination and grid/list view on the listings page</li>
+  <li>Property details with photo gallery, fullscreen viewer, location map, mortgage calculator, enquiry form and similar listings</li>
+  <li>Agent list and profile pages, blog list (with categories) and article pages</li>
+  <li>Favorites saved in the visitor's browser</li>
+  <li>List-your-property form, contact form with map, FAQ, privacy, terms and 404 pages</li>
+  <li>Accessible form validation, keyboard-friendly navigation and gallery, skip link, visible focus states</li>
+  <li>Three colour themes (gold, blue, green) switched by a single attribute</li>
+  <li>Self-hosted fonts, icons and map library: no external CSS or font requests</li>
+</ul>
+
+<h2 id="start">Quick start</h2>
+<ol>
+  <li>Unzip the download. The template lives in the <code>Nexora-Real-Estate</code> folder.</li>
+  <li>Open <code>index.html</code> in a modern browser, or serve the folder with any static server, for example <code>npx serve</code> or <code>python3 -m http.server</code>.</li>
+  <li>Edit <code>assets/js/data.js</code> to add your properties, agents and articles.</li>
+  <li>Replace the images in <code>assets/images/</code> with your own photos.</li>
+  <li>Change the brand colours at the top of <code>assets/css/styles.css</code>.</li>
+  <li>Connect the forms to your own backend (see <a href="#forms">Forms</a>).</li>
+</ol>
+<div class="note">The map tiles are loaded from OpenStreetMap, so maps need an internet connection. Everything else works offline.</div>
+
+<h2 id="files">File structure</h2>
+<pre><code>Nexora-Real-Estate/
+&#9500;&#9472;&#9472; index.html, index-2.html          Home pages
+&#9500;&#9472;&#9472; properties.html, property-details.html
+&#9500;&#9472;&#9472; agents.html, agent-details.html
+&#9500;&#9472;&#9472; about.html, blog.html, blog-details.html
+&#9500;&#9472;&#9472; contact.html, submit-property.html, favorites.html
+&#9500;&#9472;&#9472; faq.html, privacy.html, terms.html, 404.html
+&#9500;&#9472;&#9472; assets/
+&#9474;   &#9500;&#9472;&#9472; css/styles.css                All styles, with a table of contents
+&#9474;   &#9500;&#9472;&#9472; js/
+&#9474;   &#9474;   &#9500;&#9472;&#9472; data.js                   Properties, agents, blog posts
+&#9474;   &#9474;   &#9500;&#9472;&#9472; main.js                   Shared behaviour and helpers
+&#9474;   &#9474;   &#9500;&#9472;&#9472; icons.js                  Inline SVG icon set
+&#9474;   &#9474;   &#9492;&#9472;&#9472; pages/                    One small script per page
+&#9474;   &#9500;&#9472;&#9472; fonts/                        DM Sans and Playfair Display (WOFF2)
+&#9474;   &#9500;&#9472;&#9472; images/                       Demo illustrations (SVG)
+&#9474;   &#9492;&#9472;&#9472; vendor/leaflet/               Map library
+&#9500;&#9472;&#9472; documentation/                    This guide
+&#9492;&#9472;&#9472; credits.txt                       Third-party licences</code></pre>
+
+<h2 id="pages">Pages</h2>
+<table>
+  <tr><th>File</th><th>Purpose</th><th>Script</th></tr>
+  <tr><td>index.html</td><td>Home with full-width hero, search, categories, featured listings, agents, testimonials</td><td>pages/home.js</td></tr>
+  <tr><td>index-2.html</td><td>Alternative home with split hero, statistics and a how-it-works section</td><td>pages/home.js</td></tr>
+  <tr><td>properties.html</td><td>Listings with filters, sorting, pagination, grid/list toggle</td><td>pages/properties.js</td></tr>
+  <tr><td>property-details.html?id=1</td><td>Single listing built from <code>data.js</code></td><td>pages/property-details.js</td></tr>
+  <tr><td>agents.html, agent-details.html?id=1</td><td>Agent list and profile</td><td>pages/agents.js, pages/agent-details.js</td></tr>
+  <tr><td>blog.html, blog-details.html?id=1</td><td>Blog list and article</td><td>pages/blog.js, pages/blog-details.js</td></tr>
+  <tr><td>contact.html</td><td>Enquiry form and office map</td><td>pages/contact.js</td></tr>
+  <tr><td>submit-property.html</td><td>Form for owners to submit a listing</td><td>(uses main.js validation)</td></tr>
+  <tr><td>favorites.html</td><td>Saved properties</td><td>pages/favorites.js</td></tr>
+</table>
+<p>To use Home 2 as your main page, rename <code>index-2.html</code> to <code>index.html</code> and update the "Home" links.</p>
+
+<h2 id="content">Editing content</h2>
+<p>All listings, agents and posts live in <code>assets/js/data.js</code> inside the <code>NexoraData</code> object.</p>
+<h3>Properties</h3>
+<table>
+  <tr><th>Field</th><th>Description</th></tr>
+  <tr><td>id</td><td>Unique number. Used in the page address, e.g. <code>property-details.html?id=3</code></td></tr>
+  <tr><td>title, description</td><td>Text shown on cards and the detail page</td></tr>
+  <tr><td>status</td><td><code>"Sale"</code> or <code>"Rent"</code> (rent prices show "/ month")</td></tr>
+  <tr><td>type</td><td><code>Apartment</code>, <code>Villa</code>, <code>House</code>, <code>Commercial</code> or <code>Land</code></td></tr>
+  <tr><td>price, area, beds, baths, year</td><td>Numbers. Use <code>0</code> beds/baths for land or commercial</td></tr>
+  <tr><td>location, address</td><td>City/state for search; street address for the detail page</td></tr>
+  <tr><td>lat, lng</td><td>Map coordinates for the detail page</td></tr>
+  <tr><td>image, images</td><td>Card image and an array of gallery images</td></tr>
+  <tr><td>featured</td><td><code>true</code> to show on the home pages</td></tr>
+  <tr><td>agentId</td><td>The <code>id</code> of an agent</td></tr>
+  <tr><td>amenities</td><td>Array of short text strings</td></tr>
+</table>
+<h3>Adding a property</h3>
+<pre><code>{
+  id: 13, title: "Lakeside Cottage", type: "House", status: "Sale", price: 390000,
+  location: "Portland, OR", address: "8 Lake Road", lat: 45.5152, lng: -122.6784,
+  beds: 2, baths: 1, area: 1400, year: 2021, featured: false, agentId: 3,
+  image: "assets/images/cottage-1.jpg",
+  images: ["assets/images/cottage-1.jpg", "assets/images/cottage-2.jpg"],
+  description: "A short description.",
+  amenities: ["Garden", "Fireplace"]
+}</code></pre>
+<p>Agents use <code>id, name, role, location, email, phone, image, bio, specialties</code>. Posts use <code>id, title, date (YYYY-MM-DD), category, image, excerpt, body (array of paragraphs)</code>.</p>
+<p>The property, agent and article pages are built in the browser from this file. For a large site, consider generating static pages or loading data from your own API: replace <code>NexoraData</code> with the result of a <code>fetch()</code> call.</p>
+
+<h2 id="images">Images</h2>
+<p>The demo uses original vector illustrations created for this template, so there are no photo licences to manage. Replace them with your own photography.</p>
+<table>
+  <tr><th>Use</th><th>Suggested size</th></tr>
+  <tr><td>Property photos</td><td>1200 &times; 800 px (3:2), JPG or WebP</td></tr>
+  <tr><td>Agent portraits</td><td>400 &times; 500 px (4:5)</td></tr>
+  <tr><td>Home hero (<code>hero.svg</code>)</td><td>1800 &times; 900 px</td></tr>
+  <tr><td>Blog covers</td><td>1200 &times; 800 px</td></tr>
+</table>
+<p>The hero, "why choose us", about and call-to-action images are set as CSS backgrounds in <code>assets/css/styles.css</code> (search for <code>images/</code>). Keep file sizes under 300 KB where possible and compress JPGs.</p>
+
+<h2 id="brand">Colors, fonts and logo</h2>
+<h3>Colors</h3>
+<p>All colours are CSS variables at the top of <code>styles.css</code>:</p>
+<pre><code>:root {
+  --ink: #15212b;           /* text and dark surfaces */
+  --accent: #b8873a;        /* decorative accent */
+  --accent-strong: #8a6120; /* buttons and links (AA contrast on white) */
+  --cream: #f7f3ec;         /* soft section background */
+}</code></pre>
+<p>Built-in themes: add <code>data-theme="blue"</code> or <code>data-theme="green"</code> to the <code>&lt;html&gt;</code> tag of each page. When choosing your own accent, keep <code>--accent-strong</code> dark enough for white text (contrast of at least 4.5:1).</p>
+<h3>Fonts</h3>
+<p>DM Sans (body) and Playfair Display (headings) are included as WOFF2 files in <code>assets/fonts/</code> and declared with <code>@font-face</code> at the top of <code>styles.css</code>. To change fonts, add your font files, update the <code>@font-face</code> rules and set <code>--font-body</code> and <code>--font-head</code>.</p>
+<h3>Logo</h3>
+<p>The logo is a text wordmark plus an icon inside <code>&lt;a class="logo"&gt;</code> in each page's header and footer. Replace its contents with an <code>&lt;img&gt;</code> tag if you have a logo file.</p>
+
+<h2 id="forms">Forms</h2>
+<p>Forms marked with <code>data-validate</code> are validated in the browser: required fields, email, phone, number ranges and minimum length, with accessible error messages. A hidden honeypot field catches simple bots.</p>
+<p><strong>The template contains no server code.</strong> On a valid submit the demo shows a success message. To send the data somewhere, add a handler in <code>main.js</code> inside <code>bindForms</code>, just before the success message, for example with a form service such as Formspree:</p>
+<pre><code>fetch('https://formspree.io/f/your-form-id', {
+  method: 'POST',
+  headers: { 'Accept': 'application/json' },
+  body: new FormData(form)
+}).then(function (response) {
+  if (!response.ok) { throw new Error('Request failed'); }
+  /* show the success message here */
+}).catch(function () {
+  /* show an error message here */
+});</code></pre>
+<p>You can use Netlify Forms, your own PHP/Node endpoint or a CRM in the same way. Remember to add server-side validation and spam protection.</p>
+
+<h2 id="maps">Maps</h2>
+<p>Maps use Leaflet (included in <code>assets/vendor/leaflet/</code>) with OpenStreetMap tiles. Property maps use the <code>lat</code> and <code>lng</code> values from <code>data.js</code>; the office map is set in <code>assets/js/pages/contact.js</code>. Keep the OpenStreetMap attribution visible.</p>
+<div class="note">OpenStreetMap's public tile server is intended for light use. For a busy production site, use a commercial tile provider and change the URL in <code>Nexora.initMap</code> inside <code>main.js</code>.</div>
+
+<h2 id="favorites">Favorites</h2>
+<p>Saved property ids are stored in the browser's <code>localStorage</code> under <code>nexoraFavorites</code>. This is a convenience feature, not an account system. If storage is blocked, favorites still work until the page is closed.</p>
+
+<h2 id="a11y">Accessibility and SEO</h2>
+<ul>
+  <li>Skip link, landmark regions, labelled forms and a single <code>h1</code> per page</li>
+  <li>Visible focus outlines, keyboard-operable gallery, menu and dialogs (Escape closes, arrows move through photos)</li>
+  <li>Colour pairs chosen for WCAG AA contrast; animations are reduced when the visitor prefers reduced motion</li>
+  <li>Unique <code>title</code> and <code>meta description</code> on each page; Open Graph tags are included</li>
+</ul>
+<p>Before launch, add a canonical URL, an Open Graph image (1200 &times; 630 px PNG or JPG), a sitemap and structured data suited to your business.</p>
+
+<h2 id="browsers">Browser support</h2>
+<p>Latest two versions of Chrome, Edge, Firefox and Safari (desktop, iOS and Android). Internet Explorer is not supported. Tested at widths from 360 px to 1920 px.</p>
+
+<h2 id="credits">Credits and licenses</h2>
+<p>See <code>credits.txt</code> in the download for the full list. In short:</p>
+<ul>
+  <li>DM Sans and Playfair Display fonts: SIL Open Font License 1.1</li>
+  <li>Feather icons: MIT License</li>
+  <li>Leaflet map library: BSD 2-Clause License; map data &copy; OpenStreetMap contributors (ODbL)</li>
+  <li>Demo illustrations and avatars: original artwork created for this template</li>
+</ul>
+
+<h2 id="changelog">Changelog</h2>
+<h3>Version 1.1.0</h3>
+<ul>
+  <li>Replaced all remote images with original local illustrations</li>
+  <li>Self-hosted fonts, icons and map library</li>
+  <li>Rewrote CSS and JavaScript in a readable, commented format; removed inline scripts and inline styles</li>
+  <li>Added second homepage, FAQ, list-your-property page, pagination, grid/list view, mortgage calculator and maps</li>
+  <li>Added accessible form validation and safe storage handling</li>
+  <li>Improved colour contrast, focus states and responsive breakpoints</li>
+</ul>
+<h3>Version 1.0.0</h3>
+<ul><li>Initial release</li></ul>
+
+<h2 id="support">Support</h2>
+<p>For help, please use the item's comments section or the support contact listed on the marketplace item page. Support covers questions about the template and bug reports; it does not cover custom development or third-party services.</p>
+
+    </main>
+  </div>
+</body>
+</html>
